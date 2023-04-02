@@ -1,0 +1,40 @@
+package calculomedia;
+import java.util.Scanner;
+
+public class Aluno {
+ String nome;
+ int nota1, nota2, nota3;
+ 
+ public void lerDados(){
+     
+ Scanner scanner = new Scanner(System.in);
+  System.out.println("Digite o nome do aluno: ");    
+  nome = scanner.nextLine();
+  System.out.println("Digite a primeria nota do aluno: ");    
+  nota1 = scanner.nextInt();
+  System.out.println("Digite a segunda nota do aluno: ");    
+  nota2 = scanner.nextInt();
+  System.out.println("Digite a terceira nota do aluno: ");
+  nota3 = scanner.nextInt();
+ }
+ 
+
+ public double CalcularMedia(){
+   double media = (nota1 + nota2 + nota3) /3;
+   System.out.print("A media do aluno foi de : " + media );
+   return media;
+}
+}
+
+
+package calculomedia;
+import java.util.Scanner;
+public class CalculoMedia {
+
+    public static void main(String[] args) {
+      Aluno Aluno = new Aluno();
+      Aluno.lerDados();
+      Aluno.CalcularMedia();
+    }
+    
+}
