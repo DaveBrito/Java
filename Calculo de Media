@@ -20,10 +20,20 @@ public class Aluno {
  
 
  public double CalcularMedia(){
-   double media = (nota1 + nota2 + nota3) /3;
-   System.out.print("A media do aluno foi de : " + media );
+  double media = (nota1 + nota2 + nota3) /3;
+   System.out.print("\nA media do aluno foi de : " + media );
+   {
+   if (media > 5){
+   System.out.print("\nParábens, o aluno passou de ano!!..");    
+   }
+   else{
+       System.out.print("\nO aluno não atingiu a média suficiente..\n");
+   }
+       
    return media;
-}
+   }
+   }
+
 }
 
 
